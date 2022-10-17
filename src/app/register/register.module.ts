@@ -1,4 +1,5 @@
-import { ElementRef, NgModule, ViewChild } from '@angular/core';
+import { ElementRef, NgModule, ViewChild, Component } from '@angular/core';
+import { IonAccordionGroup } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
