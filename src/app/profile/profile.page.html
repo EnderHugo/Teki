@@ -1,9 +1,69 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>Profile</ion-title>
+    <ion-fab horizontal="end" vertical="center" edge="">
+      <ion-fab-button href="settings" color="dark" size="small"><ion-icon name="settings"></ion-icon></ion-fab-button>
+    </ion-fab>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+<ion-content>
+  <ion-header>
+    <div id="profile-top">
+      <ion-row>
+        <ion-col size="">
+          <ion-avatar style="height: 95px; width: 95px;">
+            <img src="assets/placeholder.png"/>
+          </ion-avatar>
+        </ion-col>
+        <ion-col>
+          <br/>
+          <ion-label id="profile-name-label"> Nome do Usuário</ion-label>
+          <br/>
+          <br/>
+          <ion-icon name="star" color="light"></ion-icon>
+          <ion-label id="profile-rating-label"> X.Y </ion-label>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-header>
+  <div id="background">
+    <div id="profile-about">
+      <ion-label color="medium">Sobre</ion-label> <br/>
+      <ion-label>Lorem ipsum</ion-label>
+      <br/><br/>
+      <ion-label color="medium">Contato</ion-label> <br/>
+      <ion-label>Lorem ipsum</ion-label>
+      <br/><br/>
+      <ion-fab-button id="edit-button">
+        <ion-icon name="pencil"></ion-icon>
+      </ion-fab-button>
+    </div>
+    <br/>
+    <div id="profile-stats">
+      <ion-label>Histórico</ion-label> <br/> <br/>
+
+      <ion-list lines="full">
+        <ion-item>
+          <ion-label color="medium">Nome</ion-label>
+          <ion-label>Lorem ipsum</ion-label>
+          <ion-button> Ler mais </ion-button>
+          <br/>
+        </ion-item>
+        <ion-item>
+          <ion-label color="medium">Nome</ion-label>
+          <ion-label>Lorem ipsum</ion-label>
+          <ion-button> Ler mais </ion-button>
+          <br/>
+        </ion-item>
+        <ion-item>
+          <ion-label color="medium">Nome</ion-label>
+          <ion-label>Lorem ipsum</ion-label>
+          <ion-button> Ler mais </ion-button>
+          <br/>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
 </ion-content>
