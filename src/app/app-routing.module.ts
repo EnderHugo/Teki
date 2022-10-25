@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { RegisterUserComponent } from './register-user/register-user.component';
+import { OktaAuthGuard, OktaCallbackComponent } from '@okta/okta-angular';
 
 const routes: Routes = [
   {
@@ -21,7 +24,8 @@ const routes: Routes = [
   {
     path: 'settings',
     loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
-  },  {
+  },
+  {
     path: 'terms',
     loadChildren: () => import('./terms/terms.module').then( m => m.TermsPageModule)
   },
@@ -29,12 +33,24 @@ const routes: Routes = [
     path: 'chat-messages',
     loadChildren: () => import('./chat-messages/chat-messages.module').then( m => m.ChatMessagesPageModule)
   },
+  {
+    path: 'select-registration',
+    loadChildren: () => import('./select-registration/select-registration.module').then( m => m.SelectRegistrationPageModule)
+  },
+  {
+    path: 'timeline',
+    component: RegisterUserComponent,
+    canActivate: [OktaAuthGuard]
+  },
+  {
+    path: 'callback', component: OktaCallbackComponent
+  }
 
 
 ];
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }), FormsModule
   ],
   exports: [RouterModule]
 })

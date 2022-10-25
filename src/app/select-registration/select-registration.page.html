@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Selecione o tipo de conta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-accordion-group expand="inset" (ionChange)="accordionGroupChange($event)">
+    <ion-accordion value="user" toggleIcon=''>
+      <ion-item slot="header" color="primary">
+        <ion-icon name="person"></ion-icon>
+        <ion-label>&nbsp; Usuário</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Podemos definir o que é perfil do consumidor como um conjunto de características, comportamentos e valores observados em um público específico. Sobre a avaliação geral, o fator mais importante foi que agora não precisam sair de casa para consertar o seu computador.
+      </div>
+    </ion-accordion>
+    <ion-accordion value="company" toggleIcon=''>
+      <ion-item slot="header" color="secondary">
+        <ion-icon name="business"></ion-icon>
+        <ion-label>&nbsp; Empresarial</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Esse é o colaborador que possui um alto grau de conservadorismo e prefere uma rotina mais clara e definida de suas tarefas. Costuma agir com tranquilidade nas mais variadas situações, já que costumeiramente seu trabalho está sempre organizado e planejado.
+      </div>
+    </ion-accordion>
+    <ion-accordion value="work" toggleIcon=''>
+      <ion-item slot="header" color="tertiary">
+        <ion-icon name="terminal"></ion-icon>
+        <ion-label>&nbsp; Prestador de serviço</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Capacidade de empreender; Capacidade para trabalhar com eficiência em equipe; Aceitação de novos vínculos de trabalho e formas de remuneração mais flexíveis; Equilíbrio emocional e resiliência (boa adaptação a novas situações); visão ampla e estratégica;
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>
+
+<div #listenerOut style="display: none; visibility: hidden;">
+  <p>hello</p>
+</div>
+
+<ion-footer>
+  <ion-button expand="block" (click)="nextPage()">Próximo</ion-button>
+</ion-footer>

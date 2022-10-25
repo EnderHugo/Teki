@@ -21,6 +21,13 @@
     <ion-button expand="full" style="margin: 14;" href="/tabs/home">
       Login
     </ion-button>
+    <ion-button expand="full" style="margin: 14;" href="/login">
+      Logout
+    </ion-button>
+    <!--
+    <button class="btn btn-primary" *ngIf="!isAuthenticated" (click)="login()"> Login </button>
+    <button class="btn btn-primary" *ngIf="isAuthenticated" (click)="logout()"> Logout </button>
+    -->
   </div>
   <div class="ion-text-center">
     <br/>
@@ -39,7 +46,7 @@
 
 <ion-footer>
   <div class="ion-text-right">
-    <ion-item href="/register" style="padding-left: 30px; padding-right: 30px; text-align: center;">
+    <ion-item href="/select-registration" style="padding-left: 30px; padding-right: 30px; text-align: center;">
       Não tem uma conta? &nbsp; <b>Cadastre-se</b>
     </ion-item>
   </div>
